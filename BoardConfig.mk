@@ -56,23 +56,20 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET) --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET) --dtb_offset $(BOARD_DTB_OFFSET)
 BOARD_KERNEL_IMAGE_NAME := Image.gz
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_KERNEL_SEPARATED_DTBO := true
-# Source build (TODO): android_kernel_duoqin_mt6761 = k61v1_64_bsp_defconfig
-#   + duoqin_f21pro.config + duoqin_f21pro_sfos.config
-TARGET_KERNEL_CONFIG := k61v1_64_bsp_defconfig
-TARGET_KERNEL_SOURCE := kernel/duoqin/mt6761
 
-# Kernel - prebuilt: our SFOS kernel from sfos/build-kernel.sh (boot-tested)
-TARGET_FORCE_PREBUILT_KERNEL := true
-ifeq ($(TARGET_FORCE_PREBUILT_KERNEL),true)
-TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
-TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
-BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
-BOARD_INCLUDE_DTB_IN_BOOTIMG := 
+# Built from source. On SailfishOS only the kernel + dtb are used: hybris-boot
+# packs them (dtb.img is passed as --dtb because of BOARD_INCLUDE_DTB_IN_BOOTIMG).
+TARGET_KERNEL_SOURCE := kernel/duoqin/mt6761
+TARGET_KERNEL_CONFIG := k61v1_64_bsp_defconfig
+# = duoqin_f21pro.config + duoqin_f21pro_sfos.config (18.1 takes only one fragment)
+TARGET_KERNEL_ADDITIONAL_CONFIG := duoqin_f21pro_hybris.config
+TARGET_KERNEL_CLANG_COMPILE := true
+# Kernel is configured for LLD/LLVM binutils (CONFIG_LD_IS_LLD), like stock
+TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+
+# DTBO: stock image (boot-tested with our kernel); flashed separately to dtbo_X
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
-BOARD_KERNEL_SEPARATED_DTBO := 
-endif
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)

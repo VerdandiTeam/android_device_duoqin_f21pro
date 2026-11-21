@@ -28,13 +28,13 @@ cmdline: bootopt=64S3,32N2,64N2 buildvariant=user
 
 ## Kernel
 
-`prebuilts/kernel` and `prebuilts/dtb.img` are the SailfishOS-configured
-kernel (`k61v1_64_bsp_defconfig` + `duoqin_f21pro.config` +
-`duoqin_f21pro_sfos.config`), built with AOSP clang r383902 and boot-tested
-with hybris-boot (telnet over RNDIS works). `prebuilts/dtbo.img` is stock.
+Built from source: [`android_kernel_duoqin_mt6761`](https://github.com/JamiKettunen/android_kernel_duoqin_mt6761)
+checked out at `kernel/duoqin/mt6761`, using `k61v1_64_bsp_defconfig` +
+`duoqin_f21pro_hybris.config` (the F21 Pro fragment + SailfishOS fragment
+combined, since LineageOS 18.1 takes a single additional fragment), clang +
+LLD. On SailfishOS the kernel and `dtb.img` are packed by hybris-boot.
 
-Building the kernel from source in-tree (`TARGET_KERNEL_SOURCE :=
-kernel/duoqin/mt6761`) is not wired up yet.
+`prebuilts/dtbo.img` is the stock DTBO.
 
 ## Proprietary blobs
 
@@ -53,5 +53,5 @@ inner `system/system`). Blobs land in
 - [x] Vendor blobs extracted (1307 entries)
 - [ ] First hybris-18.1 build
 - [ ] Prune `/system` blobs from `proprietary-files.txt` (only `/vendor` + `/odm` should be needed with Treble)
-- [ ] In-tree kernel build
+- [x] In-tree kernel build (kernel/duoqin/mt6761, `duoqin_f21pro_hybris.config`)
 - [ ] SailfishOS: droid-hal-f21pro, droid-config-f21pro, fixup-mountpoints
