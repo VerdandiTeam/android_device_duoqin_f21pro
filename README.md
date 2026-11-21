@@ -34,7 +34,8 @@ checked out at `kernel/duoqin/mt6761`, using `k61v1_64_bsp_defconfig` +
 combined, since LineageOS 18.1 takes a single additional fragment), clang +
 LLD. On SailfishOS the kernel and `dtb.img` are packed by hybris-boot.
 
-`prebuilts/dtbo.img` is the stock DTBO.
+`dtbo.img` is built from the kernel's `f21pro.dtbo` overlay, which is
+byte-identical to the stock `dtbo` partition contents.
 
 ## Proprietary blobs
 

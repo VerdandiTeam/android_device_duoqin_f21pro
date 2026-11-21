@@ -68,8 +68,9 @@ TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
-# DTBO: stock image (boot-tested with our kernel); flashed separately to dtbo_X
-BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
+# DTBO built from source (CONFIG_BUILD_ARM64_DTB_OVERLAY_IMAGE_NAMES=mediatek/f21pro);
+# f21pro.dtbo is byte-identical to the single entry in stock dtbo_a
+BOARD_KERNEL_SEPARATED_DTBO := true
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
