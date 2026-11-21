@@ -1,8 +1,7 @@
 # Device tree for Duoqin (Qin) F21 Pro — `f21pro`
 
-LineageOS 18.1 / hybris-18.1 (Android 11) device tree, intended as the base
-for a SailfishOS port. Generated from the stock firmware with `aospdtgen`
-and fixed up by hand.
+LineageOS 18.1 (Android 11) device tree. Generated from the stock firmware
+with `aospdtgen` and fixed up by hand.
 
 | | |
 |---|---|
@@ -30,8 +29,7 @@ cmdline: bootopt=64S3,32N2,64N2 buildvariant=user
 
 Built from source: [`android_kernel_duoqin_mt6761`](https://github.com/JamiKettunen/android_kernel_duoqin_mt6761)
 checked out at `kernel/duoqin/mt6761`, using `k61v1_64_bsp_defconfig` +
-`duoqin_f21pro_sfos.config` (F21 Pro device support + SailfishOS
-requirements), clang + LLD. On SailfishOS the kernel and `dtb.img` are packed by hybris-boot.
+`duoqin_f21pro.config`, clang + LLD.
 
 `dtbo.img` is built from the kernel's `f21pro.dtbo` overlay, which is
 byte-identical to the stock `dtbo` partition contents.
