@@ -46,4 +46,4 @@ byte-identical to the stock `dtbo` partition contents.
 The dump directory must have `system/`, `vendor/`, `product/`, `odm/`,
 `system_ext/` at the top level (system-as-root dumps: point `system` at the
 inner `system/system`). Blobs land in
-[`android_vendor_duoqin_f21pro`](../../../vendor/duoqin/f21pro).
+`vendor/duoqin/f21pro`.
