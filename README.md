@@ -47,12 +47,3 @@ The dump directory must have `system/`, `vendor/`, `product/`, `odm/`,
 `system_ext/` at the top level (system-as-root dumps: point `system` at the
 inner `system/system`). Blobs land in
 [`android_vendor_duoqin_f21pro`](../../../vendor/duoqin/f21pro).
-
-## Status / TODO
-
-- [x] Device tree generated, boot layout / super / fstab fixed
-- [x] Vendor blobs extracted (1307 entries)
-- [ ] First hybris-18.1 build
-- [ ] Prune `/system` blobs from `proprietary-files.txt` (only `/vendor` + `/odm` should be needed with Treble)
-- [x] In-tree kernel build (kernel/duoqin/mt6761, `duoqin_f21pro_hybris.config`)
-- [ ] SailfishOS: droid-hal-f21pro, droid-config-f21pro, fixup-mountpoints
