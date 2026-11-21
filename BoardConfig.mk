@@ -61,8 +61,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 # packs them (dtb.img is passed as --dtb because of BOARD_INCLUDE_DTB_IN_BOOTIMG).
 TARGET_KERNEL_SOURCE := kernel/duoqin/mt6761
 TARGET_KERNEL_CONFIG := k61v1_64_bsp_defconfig
-# = duoqin_f21pro.config + duoqin_f21pro_sfos.config (18.1 takes only one fragment)
-TARGET_KERNEL_ADDITIONAL_CONFIG := duoqin_f21pro_hybris.config
+TARGET_KERNEL_ADDITIONAL_CONFIG := duoqin_f21pro_sfos.config
 TARGET_KERNEL_CLANG_COMPILE := true
 # Kernel is configured for LLD/LLVM binutils (CONFIG_LD_IS_LLD), like stock
 TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy
