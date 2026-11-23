@@ -47,22 +47,6 @@ vendor/lib64/soundfx/libaudiopreprocessing_mtk.so
 vendor/lib64/soundfx/libdynproc.so
 
 # Audio configs
-etc/a2dp_audio_policy_configuration.xml
-etc/a2dp_in_audio_policy_configuration.xml
-etc/audio_effects.conf
-etc/audio_policy_configuration.xml
-etc/audio_policy_configuration_bluetooth_legacy_hal.xml
-etc/audio_policy_configuration_stub.xml
-etc/audio_policy_engine_configuration.xml
-etc/audio_policy_engine_default_stream_volumes.xml
-etc/audio_policy_engine_product_strategies.xml
-etc/audio_policy_engine_stream_volumes.xml
-etc/audio_policy_volumes.xml
-etc/bluetooth_audio_policy_configuration.xml
-etc/default_volume_tables.xml
-etc/hearing_aid_audio_policy_configuration.xml
-etc/r_submix_audio_policy_configuration.xml
-etc/usb_audio_policy_configuration.xml
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/a2dp_in_audio_policy_configuration.xml
 vendor/etc/audio_effects.xml
@@ -183,8 +167,6 @@ vendor/lib64/libbluetooth_mtk.so
 vendor/lib64/libbt-vendor.so
 
 # Bluetooth (A2DP)
-system_ext/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so
-system_ext/lib64/vendor.mediatek.hardware.bluetooth.audio@2.1.so
 vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl.so
 vendor/lib/hw/audio.bluetooth.default.so
 vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so
@@ -444,22 +426,6 @@ vendor/bin/hw/android.hardware.cas@1.2-service
 vendor/etc/init/android.hardware.cas@1.2-service.rc
 
 # Display
-lib/vendor.mediatek.hardware.mms@1.0.so
-lib/vendor.mediatek.hardware.mms@1.1.so
-lib/vendor.mediatek.hardware.mms@1.2.so
-lib/vendor.mediatek.hardware.mms@1.3.so
-lib/vendor.mediatek.hardware.pq@2.0.so
-lib/vendor.mediatek.hardware.pq@2.1.so
-lib/vendor.mediatek.hardware.pq@2.2.so
-lib/vendor.mediatek.hardware.pq@2.3.so
-lib64/vendor.mediatek.hardware.mms@1.0.so
-lib64/vendor.mediatek.hardware.mms@1.1.so
-lib64/vendor.mediatek.hardware.mms@1.2.so
-lib64/vendor.mediatek.hardware.mms@1.3.so
-lib64/vendor.mediatek.hardware.pq@2.0.so
-lib64/vendor.mediatek.hardware.pq@2.1.so
-lib64/vendor.mediatek.hardware.pq@2.2.so
-lib64/vendor.mediatek.hardware.pq@2.3.so
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/hw/android.hardware.graphics.composer@2.1-service
 vendor/bin/hw/android.hardware.memtrack@1.0-service
@@ -641,18 +607,6 @@ vendor/lib/hw/local_time.default.so
 vendor/lib64/hw/local_time.default.so
 
 # Media
-etc/seccomp_policy/mediacodec.policy
-lib/libmedia_codeclist.so
-lib/libstagefright_bufferpool@2.0.1.so
-lib/libstagefright_codecbase.so
-lib/libstagefright_framecapture_utils.so
-lib/libstagefright_wfd_mtk.so
-lib64/libmedia_codeclist.so
-lib64/libstagefright_bufferpool@2.0.1.so
-lib64/libstagefright_codecbase.so
-lib64/libstagefright_framecapture_utils.so
-system_ext/lib/vendor.mediatek.hardware.gpu@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.gpu@1.0.so
 vendor/bin/hw/android.hardware.media.omx@1.0-service
 vendor/etc/init/android.hardware.media.omx@1.0-service.rc
 vendor/etc/seccomp_policy/mediacodec.policy
@@ -715,10 +669,6 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
 # Power
-system_ext/lib/vendor.mediatek.hardware.mtkpower@1.0.so
-system_ext/lib/vendor.mediatek.hardware.mtkpower@1.1.so
-system_ext/lib64/vendor.mediatek.hardware.mtkpower@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.mtkpower@1.1.so
 vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
@@ -734,10 +684,6 @@ vendor/lib64/vendor.mediatek.hardware.mtkpower@1.0.so
 vendor/lib64/vendor.mediatek.hardware.mtkpower@1.1.so
 
 # Radio
-system_ext/lib/vendor.mediatek.hardware.mtkradioex@1.0.so
-system_ext/lib/vendor.mediatek.hardware.nwk_opt@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.mtkradioex@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.nwk_opt@1.0.so
 vendor/bin/hw/mtkfusionrild
 vendor/bin/ccci_mdinit
 vendor/bin/ccci_rpcd
@@ -769,8 +715,6 @@ vendor/lib64/libsysenv.so
 vendor/lib64/vendor.mediatek.hardware.mtkradioex@2.0.so
 
 # Radio (IMS)
-system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 vendor/bin/bip
 vendor/bin/charon
 vendor/bin/epdg_wod
