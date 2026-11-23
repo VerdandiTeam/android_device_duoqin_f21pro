@@ -104,6 +104,13 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
 # VINTF
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+DEVICE_MANIFEST_FILE += $(wildcard $(DEVICE_PATH)/vintf/manifest/*.xml)
+# Per-SIM-config ODM manifests, picked via ro.boot.product.hardware.sku
+ODM_MANIFEST_SKUS := dsds qsqs ss tsts
+ODM_MANIFEST_dsds_FILES := $(DEVICE_PATH)/vintf/odm/manifest_dsds.xml
+ODM_MANIFEST_qsqs_FILES := $(DEVICE_PATH)/vintf/odm/manifest_qsqs.xml
+ODM_MANIFEST_ss_FILES := $(DEVICE_PATH)/vintf/odm/manifest_ss.xml
+ODM_MANIFEST_tsts_FILES := $(DEVICE_PATH)/vintf/odm/manifest_tsts.xml
 
 # Inherit the proprietary files
 include vendor/duoqin/f21pro/BoardConfigVendor.mk
