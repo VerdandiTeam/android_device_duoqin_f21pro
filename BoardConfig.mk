@@ -67,11 +67,13 @@ TARGET_KERNEL_ADDITIONAL_CONFIG := duoqin_f21pro.config
 TARGET_KERNEL_CLANG_COMPILE := true
 # Kernel is configured for LLD/LLVM binutils (CONFIG_LD_IS_LLD), like stock
 TARGET_KERNEL_ADDITIONAL_FLAGS := LD=ld.lld NM=llvm-nm OBJCOPY=llvm-objcopy
-BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 
-# DTBO built from source (CONFIG_BUILD_ARM64_DTB_OVERLAY_IMAGE_NAMES=mediatek/f21pro);
-# f21pro.dtbo is byte-identical to the single entry in stock dtbo_a
+# DTB and DTBO built from source, packed by dtb.mk; f21pro.dtbo is
+# byte-identical to the single entry in stock dtbo_a
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_PREBUILT_DTBIMAGE_DIR := $(OUT_DIR)/target/product/$(TARGET_DEVICE)/obj/KERNEL_OBJ/arch/arm64/boot/dts/mediatek
 BOARD_KERNEL_SEPARATED_DTBO := true
+BOARD_CUSTOM_DTBOIMG_MK := $(DEVICE_PATH)/dtb.mk
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
