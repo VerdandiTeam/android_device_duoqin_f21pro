@@ -877,12 +877,10 @@ vendor/etc/wifi/wpa_supplicant.conf
 vendor/etc/wifi/wpa_supplicant_overlay.conf
 
 # Miscellaneous
-vendor/app/GoogleNetworkStackResOverlay/GoogleNetworkStackResOverlay.apk
-vendor/app/GoogleTetheringResOverlay/GoogleTetheringResOverlay.apk
-vendor/app/InProcessTetheringResOverlay/InProcessTetheringResOverlay.apk
-vendor/app/NetworkStackInProcessResOverlay/NetworkStackInProcessResOverlay.apk
-vendor/app/NetworkStackResOverlay/NetworkStackResOverlay.apk
-vendor/app/TetheringResOverlay/TetheringResOverlay.apk
+-vendor/app/InProcessTetheringResOverlay/InProcessTetheringResOverlay.apk;PRESIGNED
+-vendor/app/NetworkStackInProcessResOverlay/NetworkStackInProcessResOverlay.apk;PRESIGNED
+-vendor/app/NetworkStackResOverlay/NetworkStackResOverlay.apk;PRESIGNED
+-vendor/app/TetheringResOverlay/TetheringResOverlay.apk;PRESIGNED
 vendor/bin/hw/power_native_test_v_1_0
 vendor/bin/hw/power_native_test_v_1_1
 vendor/bin/hw/vendor.mediatek.hardware.gpu@1.0-service
