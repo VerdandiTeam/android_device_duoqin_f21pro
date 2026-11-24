@@ -18,4 +18,5 @@ $(PRODUCT_OUT)/dtb.img: $(F21PRO_DTS_OUT)/mt6761.dtb
 MKDTBOIMG := $(HOST_OUT_EXECUTABLES)/mkdtboimg.py$(HOST_EXECUTABLE_SUFFIX)
 $(BOARD_PREBUILT_DTBOIMAGE): $(MKDTBOIMG) $(F21PRO_DTS_OUT)/f21pro.dtbo
 	@echo "Building dtbo.img"
+	$(hide) mkdir -p $(dir $@)
 	$(MKDTBOIMG) create $@ --page_size=$(BOARD_KERNEL_PAGESIZE) $(F21PRO_DTS_OUT)/f21pro.dtbo
