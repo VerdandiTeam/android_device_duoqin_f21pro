@@ -55,7 +55,8 @@ PRODUCT_PACKAGES += \
     init.recovery.mt6761.rc \
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6761
+    $(LOCAL_PATH)/rootdir/etc/fstab.mt6761:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6761 \
+    $(LOCAL_PATH)/rootdir/etc/ueventd.mt6761.rc:$(TARGET_ROOT_OUT)/ueventd.mt6761.rc
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
